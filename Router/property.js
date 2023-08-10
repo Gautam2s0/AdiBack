@@ -31,8 +31,6 @@ propertyRouter.post('/booking',UserID, async (req, res) => {
   const {propertyId,from,till}=req.body
   const userID=req.userID
   const user={userID,propertyId,from,till}
- 
-   
   try {
     
     const book = new BookingModel(user)
@@ -47,6 +45,7 @@ propertyRouter.get('/booking',UserID, async (req, res) => {
    const id=req.userID
   try {
     const book=await BookingModel.find({userID:id})
+    .populate("propertyId")
     book.length > 0
       ? res.status(200).send(book)
       : res.status(200).send("you did not book so for");

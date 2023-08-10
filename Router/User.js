@@ -3,6 +3,7 @@ const { UserModel } = require("../Models/User");
 require("dotenv").config();
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
+const { UserID } = require("../middleWare/userID");
 
 const userRouter = express.Router();
 
@@ -71,6 +72,25 @@ userRouter.post("/login", async (req, res) => {
   }
 });
 
+
+// userInfo
+
+userRouter.get("/info",UserID, async (req, res) => {
+  const userID=req.userID
+  console.log("info",userID)
+  try {
+    const user = await UserModel.findOne({ _id:userID });
+    const {name,email,_id}=user
+    // check if user exists in the database
+    if (!user) {
+      return res.status(404).send({ error: 'Invalid credentials' });
+    }
+    res.send({name,email,_id})
+
+  } catch (err) {
+    res.status(500).send(err);
+  }
+});
 
 
 module.exports = {
