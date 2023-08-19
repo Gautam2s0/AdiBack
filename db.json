@@ -1,0 +1,33 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "jack",
+      "email": "jack123@gmail.com",
+      "age": 23,
+      "occupation": "student",
+      "address": "India",
+      "password": "jack@123",
+      "gender": "male",
+      "mobile": 9635698420
+    },
+    {
+      "name": "anna",
+      "email": "ann123@gmail.com",
+      "age": 23,
+      "occupation": "student",
+      "address": "us",
+      "password": "anna@123",
+      "gender": "female",
+      "mobile": 1125369897,
+      "id": 2
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ]
+}
