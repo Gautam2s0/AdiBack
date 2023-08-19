@@ -44,12 +44,6 @@
       "mobile": 9625369820,
       "id": 4
     }
-  ],
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
   ]
+  
 }
