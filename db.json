@@ -21,6 +21,28 @@
       "gender": "female",
       "mobile": 1125369897,
       "id": 2
+    },
+    {
+      "name": "madan",
+      "email": "madan123@gmail.com",
+      "age": 23,
+      "occupation": "student",
+      "address": "India",
+      "password": "madan@123",
+      "gender": "male",
+      "mobile": 9625369897,
+      "id": 3
+    },
+    {
+      "name": "dan",
+      "email": "dan123@gmail.com",
+      "age": 23,
+      "occupation": "student",
+      "address": "India",
+      "password": "madan@123",
+      "gender": "male",
+      "mobile": 9625369820,
+      "id": 4
     }
   ],
   "posts": [
